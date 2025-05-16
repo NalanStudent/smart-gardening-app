@@ -1,0 +1,40 @@
+/* src/components/Homepage/ZoneTile.css */
+.zone-tile {
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--white); /* Ensure it uses the theme variable */
+  /* Uses .tile global styles for shadow and border-radius */
+}
+
+.zone-tile h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--primary-green);
+  font-size: 1.5em;
+}
+
+.zone-tile .crop-type {
+  font-size: 0.9em;
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.zone-summary {
+  display: flex;
+  justify-content: space-around; /* Or space-between */
+  align-items: center;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+.zone-summary span {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
+}
+
+.summary-icon {
+  color: var(--light-green); /* Softer green for icons */
+  font-size: 1.2em;
+}

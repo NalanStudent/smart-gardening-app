@@ -1,0 +1,58 @@
+/* src/components/ZonePage/MeterTile.css */
+.meter-tile {
+  text-align: center;
+  padding: 20px; /* Uses .tile global styles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 150px; /* Ensure consistent height */
+}
+
+.meter-icon {
+  font-size: 2.5em; /* Larger icons */
+  color: var(--primary-green);
+  margin-bottom: 10px;
+}
+
+.meter-icon.error-icon {
+  color: var(--error-color);
+}
+
+.meter-label {
+  font-size: 1em;
+  color: var(--dark-gray);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.meter-value {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--dark-green);
+  margin-bottom: 5px;
+}
+
+.meter-unit {
+  font-size: 0.7em;
+  margin-left: 3px;
+  font-weight: normal;
+  color: var(--dark-gray);
+}
+
+.meter-tile.error {
+  background-color: #fff0f0; /* Light red for error indication */
+  border: 1px solid var(--error-color);
+}
+
+.meter-tile.error .meter-value,
+.meter-tile.error .meter-status {
+  color: var(--error-color);
+}
+
+/* Optional status styling if you add status text */
+.meter-status {
+  font-size: 0.8em;
+  color: var(--dark-gray);
+  font-style: italic;
+}

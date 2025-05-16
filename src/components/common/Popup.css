@@ -1,0 +1,22 @@
+/* src/components/common/Popup/Popup.css */
+/* Styles for popup-overlay, popup-content, popup-close-button are already in App.css */
+/* We can add specific styles for title and body if needed here */
+
+.popup-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--primary-green);
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.popup-body {
+  /* Add any specific styling for the body content of the popup */
+}
+
+.popup-controls {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}

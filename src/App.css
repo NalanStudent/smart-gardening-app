@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f4f0; /* Light green-ish white background */
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-green: #4CAF50; /* Main green color */
+  --light-green: #81C784;
+  --dark-green: #388E3C;
+  --white: #FFFFFF;
+  --light-gray: #f5f5f5;
+  --medium-gray: #e0e0e0;
+  --dark-gray: #757575;
+  --text-color: #333;
+  --tile-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+
+  /* Notification Colors */
+  --warning-color: #FFA726; /* Orange */
+  --info-color: #29B6F6;    /* Blue */
+  --success-color: #66BB6A; /* Green */
+  --error-color: #EF5350;   /* Red */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container {
+  max-width: 1200px; /* Max width for larger screens, content will center */
+  margin: 0 auto;
+  padding: 0; /* Remove padding if header/footer span full width */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Basic button styling */
+.button {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+  background-color: var(--dark-green);
+}
+
+.button-secondary {
+  background-color: var(--light-gray);
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+}
+
+.button-secondary:hover {
+  background-color: var(--medium-gray);
+}
+
+.button-danger {
+  background-color: var(--error-color);
+}
+.button-danger:hover {
+  background-color: #d32f2f; /* Darker red */
+}
+
+
+/* General tile styling */
+.tile {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--tile-shadow);
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+}
+
+/* For popups */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  z-index: 1000;
 }
 
-.App-link {
-  color: #61dafb;
+.popup-content {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  min-width: 300px;
+  max-width: 90%;
+  z-index: 1001;
+  position: relative; /* For close button positioning */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.popup-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--dark-gray);
+}
+
+.popup-close-button:hover {
+  color: var(--text-color);
+}
+
+/* Input field basic styling */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  width: calc(100% - 22px); /* Full width minus padding and border */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--medium-gray);
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+/* For consistent icon sizes */
+.icon-sm {
+  font-size: 1.2em;
+}
+.icon-md {
+  font-size: 1.5em;
+}
+.icon-lg {
+  font-size: 2em;
+}
+
+/* Responsive design considerations */
+@media (max-width: 768px) {
+  .tile {
+    margin: 10px 0; /* Full width on smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+  .popup-content {
+    min-width: 90%;
   }
 }

@@ -1,0 +1,302 @@
+/* src/components/SettingsPage/SettingsPage.css */
+.settings-page-container {
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto; /* Center content */
+}
+.settings-page-container.centered-message {
+    text-align: center;
+    padding-top: 50px;
+    color: var(--dark-gray);
+}
+
+.settings-page-container h2 {
+  color: var(--dark-green);
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--light-green);
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--tile-shadow);
+}
+
+.large-profile-icon {
+  font-size: 5em; /* Significantly larger */
+  color: var(--primary-green);
+  margin-right: 25px;
+  border-radius: 50%;
+  padding: 5px; /* If it's an icon font, padding makes it look better */
+  background-color: var(--light-gray); /* Slight background for the icon */
+}
+
+.user-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.6em;
+  color: var(--dark-green);
+}
+
+.user-details p {
+  margin: 0;
+  font-size: 1em;
+  color: var(--dark-gray);
+}
+
+.settings-list {
+  margin-bottom: 30px;
+}
+
+.settings-category {
+    margin-bottom: 25px;
+}
+
+.settings-category h4 {
+    font-size: 0.9em;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-left: 10px; /* Align with items if they have padding */
+}
+
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 18px 15px;
+  background-color: var(--white);
+  border: none;
+  border-bottom: 1px solid var(--light-gray);
+  text-align: left;
+  font-size: 1.05em;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.setting-item:first-of-type {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+.setting-item:last-of-type {
+  border-bottom: none;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+
+.setting-item:hover {
+  background-color: #f9f9f9; /* Slightly different hover for items */
+}
+
+.setting-icon {
+  margin-right: 15px;
+  color: var(--primary-green);
+  font-size: 1.3em;
+  width: 25px; /* Ensure icons align well */
+  text-align: center;
+}
+
+.setting-item span {
+  flex-grow: 1;
+}
+
+.arrow-icon {
+  color: var(--medium-gray);
+  font-size: 1em;
+}
+
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1em;
+}
+
+/* Theme Toggle Switch */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark-gray);
+    font-size: 0.9em;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Smaller switch */
+  height: 26px; /* Smaller switch */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* Smaller circle */
+  width: 20px;  /* Smaller circle */
+  left: 3px;   /* Adjust position */
+  bottom: 3px; /* Adjust position */
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-green);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-green);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px); /* Adjust translation */
+}
+
+.slider.round {
+  border-radius: 26px; /* Adjust for height */
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Dark Theme specific adjustments (add to App.css or a separate theme file if it grows) */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-theme .app-header {
+  background-color: #1f1f1f; /* Darker green or near black */
+  color: var(--light-green); /* Light green text on dark header */
+}
+.dark-theme .app-header .icon-button,
+.dark-theme .app-header .logo-link {
+    color: var(--light-green);
+}
+
+
+.dark-theme .tile,
+.dark-theme .popup-content,
+.dark-theme .setting-item,
+.dark-theme .profile-section,
+.dark-theme .notification-filters,
+.dark-theme .data-graph-container,
+.dark-theme .notification-item {
+  background-color: #1e1e1e; /* Dark gray for tiles */
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+.dark-theme .notification-item.unread {
+    background-color: #2c3e50; /* Darker unread background */
+}
+
+.dark-theme .button {
+  background-color: var(--light-green);
+  color: #121212; /* Dark text on light green button */
+}
+.dark-theme .button:hover {
+  background-color: var(--primary-green);
+}
+.dark-theme .button-secondary {
+    background-color: #333;
+    color: var(--light-green);
+    border-color: var(--light-green);
+}
+.dark-theme .button-secondary:hover {
+    background-color: #444;
+}
+
+
+.dark-theme h2, .dark-theme h3, .dark-theme h4,
+.dark-theme .user-details h3,
+.dark-theme .meter-value,
+.dark-theme .meter-icon,
+.dark-theme .popup-title {
+  color: var(--light-green); /* Light green for titles */
+}
+
+.dark-theme .meter-label,
+.dark-theme .meter-unit,
+.dark-theme .user-details p,
+.dark-theme .setting-icon, /* Keep some icons green */
+.dark-theme .arrow-icon,
+.dark-theme .notification-timestamp,
+.dark-theme .filter-button,
+.dark-theme .graph-note,
+.dark-theme .settings-category h4,
+.dark-theme .theme-switcher span {
+  color: #bbbbbb; /* Lighter gray for secondary text */
+}
+
+.dark-theme .filter-button.active {
+  background-color: var(--light-green);
+  color: #121212;
+  border-color: var(--light-green);
+}
+
+.dark-theme input[type="text"],
+.dark-theme input[type="password"],
+.dark-theme input[type="number"],
+.dark-theme input[type="email"],
+.dark-theme select,
+.dark-theme textarea {
+  background-color: #2c2c2c;
+  border-color: #555;
+  color: #e0e0e0;
+}
+.dark-theme input::placeholder {
+    color: #777;
+}
+
+.dark-theme .large-profile-icon {
+    background-color: #333;
+    color: var(--light-green);
+}
+
+/* Ensure some icons retain their specific colors in dark mode */
+.dark-theme .notification-warning .notification-icon-wrapper { color: var(--warning-color); }
+.dark-theme .notification-error .notification-icon-wrapper { color: var(--error-color); }
+.dark-theme .notification-info .notification-icon-wrapper { color: var(--info-color); }
+.dark-theme .notification-success .notification-icon-wrapper { color: var(--success-color); }
+
+.dark-theme .back-button {
+    color: var(--light-green);
+    border-color: var(--light-green);
+}
+.dark-theme .back-button:hover {
+    background-color: var(--light-green);
+    color: #121212;
+}

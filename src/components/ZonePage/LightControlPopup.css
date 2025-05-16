@@ -1,0 +1,17 @@
+/* src/components/ZonePage/LightControlPopup.css */
+/* Similar structure to WaterControlPopup.css, reuse common styles if possible */
+.light-control-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* .control-group, .range-container, .quick-on-buttons can inherit or be redefined if different */
+/* Using the same classes from WaterControlPopup.css for consistency */
+
+.intensity-input {
+  width: 150px; /* Adjust as needed */
+  padding: 8px;
+  border: 1px solid var(--medium-gray);
+  border-radius: var(--border-radius);
+}

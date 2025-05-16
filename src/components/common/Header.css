@@ -1,0 +1,90 @@
+/* src/components/common/Header/Header.css */
+.app-header {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  position: sticky; /* Makes header stick on scroll */
+  top: 0;
+  z-index: 100; /* Ensures header is above other content */
+}
+
+.logo-link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.6em; /* Increased icon size */
+  margin-left: 20px; /* Spacing between icons */
+  padding: 5px;
+  position: relative; /* For badge positioning */
+  transition: opacity 0.2s ease;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}
+
+.notification-icon-container {
+  position: relative; /* Needed for the badge */
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px; /* Adjust for better positioning */
+  right: -8px; /* Adjust for better positioning */
+  background-color: var(--error-color); /* A contrasting color for visibility */
+  color: var(--white);
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 0.7em;
+  font-weight: bold;
+  min-width: 10px; /* Ensure badge is visible even for single digit */
+  text-align: center;
+  line-height: 1; /* Ensure text is centered vertically */
+}
+
+.profile-icon {
+  /* Style for profile icon if different from other icon-buttons */
+}
+
+.refresh-button {
+ /* Style for refresh button if different */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 10px 15px;
+  }
+  .app-title {
+    font-size: 1.5em;
+  }
+  .icon-button {
+    font-size: 1.4em;
+    margin-left: 15px;
+  }
+  .notification-badge {
+    font-size: 0.6em;
+    padding: 2px 5px;
+  }
+}

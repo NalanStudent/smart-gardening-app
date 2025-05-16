@@ -1,0 +1,96 @@
+/* src/components/ZonePage/ZonePage.css */
+.zone-page-container {
+  padding: 20px;
+}
+
+.zone-page-loading,
+.zone-page-error {
+  text-align: center;
+  font-size: 1.2em;
+  padding: 50px 20px;
+  color: var(--dark-gray);
+}
+.zone-page-error button,
+.zone-page-loading button { /* Assuming you might add a retry for loading */
+    margin-left: 10px;
+}
+
+
+.zone-page-container h2,
+.zone-page-container h3 {
+  color: var(--dark-green);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.zone-page-container h3 {
+    margin-top: 30px;
+    border-bottom: 2px solid var(--light-green);
+    padding-bottom: 10px;
+}
+
+.back-button {
+  background: none;
+  border: 1px solid var(--primary-green);
+  color: var(--primary-green);
+  padding: 8px 15px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.back-button:hover {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.meter-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.zone-controls {
+    margin-bottom: 30px;
+}
+
+.control-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.control-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1em;
+    padding: 12px 20px; /* Larger buttons */
+}
+.control-button svg {
+    font-size: 1.2em;
+}
+
+
+.historical-data-section {
+  margin-top: 30px;
+}
+
+/* Responsive adjustments for meter tiles if needed,
+   though auto-fit should handle it well.
+   Example: for very small screens, make them 1 column */
+@media (max-width: 480px) {
+  .meter-tiles-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+  .control-button {
+    width: 100%; /* Make control buttons full width */
+    justify-content: center;
+  }
+}

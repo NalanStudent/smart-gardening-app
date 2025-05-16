@@ -1,0 +1,85 @@
+/* src/components/NotificationPage/NotificationPage.css */
+.notification-page-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto; /* Center the content */
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--light-green);
+}
+
+.notification-header h2 {
+  color: var(--dark-green);
+  margin: 0;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-toggle-button,
+.clear-all-button {
+  padding: 8px 15px;
+  font-size: 0.9em;
+}
+.filter-toggle-button svg {
+    margin-right: 5px;
+}
+
+
+.notification-filters {
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  box-shadow: var(--tile-shadow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Allow filters to wrap */
+}
+.notification-filters p {
+    margin: 0;
+    font-weight: 500;
+    color: var(--dark-gray);
+}
+
+
+.filter-button {
+  background-color: var(--light-gray);
+  color: var(--primary-green);
+  border: 1px solid var(--medium-gray);
+  padding: 8px 12px;
+  border-radius: 20px; /* Pill shape */
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.filter-button:hover {
+  background-color: var(--medium-gray);
+}
+
+.filter-button.active {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+}
+
+.notifications-list {
+  /* Styles for the list container if any */
+}
+
+.no-notifications-message {
+  text-align: center;
+  font-size: 1.1em;
+  color: var(--dark-gray);
+  padding: 30px 0;
+}

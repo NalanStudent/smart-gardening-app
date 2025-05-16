@@ -1,0 +1,44 @@
+/* src/components/ZonePage/DataGraph.css */
+.data-graph-container {
+  background-color: var(--light-gray);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.data-graph-container.placeholder p {
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+.data-graph-container h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--dark-green);
+}
+
+.graph-placeholder {
+  width: 100%;
+  min-height: 120px; /* Ensure some height even if SVG is basic */
+  background-color: var(--white);
+  border: 1px dashed var(--medium-gray);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto; /* For horizontal scrolling of basic SVG */
+}
+
+.graph-placeholder svg {
+    min-width: 300px; /* Ensure SVG has some minimum width if many data points */
+}
+
+
+.graph-note {
+  font-size: 0.9em;
+  color: var(--dark-gray);
+  margin-top: 10px;
+  text-align: center;
+}

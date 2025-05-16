@@ -1,0 +1,54 @@
+/* src/components/ZonePage/WaterControlPopup.css */
+.water-control-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between control groups */
+}
+
+.control-group {
+  padding: 15px;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--dark-green);
+}
+
+.range-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.moisture-slider {
+  flex-grow: 1;
+  /* Custom styling for range input if needed */
+  accent-color: var(--primary-green); /* Styles the thumb and track in modern browsers */
+}
+
+.range-value {
+  font-weight: bold;
+  color: var(--primary-green);
+  min-width: 40px; /* Ensure space for 100% */
+  text-align: right;
+}
+
+.quick-on-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.quick-on-buttons .button {
+  flex-grow: 1; /* Make buttons take equal space if desired */
+}
+
+.timer-active-message {
+    color: var(--dark-green);
+    font-style: italic;
+    margin-top: 10px;
+}
