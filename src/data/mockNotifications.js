@@ -24,7 +24,7 @@ export const mockNotificationsData = [
   {
     id: 'notif4',
     type: 'success',
-    message: 'System data backup completed successfully.',
+    message: 'All sensors are fully functional.',
     timestamp: new Date(Date.now() - 86400000).toISOString(), // 1 day ago
     read: true,
   },

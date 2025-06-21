@@ -106,7 +106,7 @@ const SettingsPage = () => {
 
           <button className="setting-item" onClick={handleDataBackupSync}>
             <FaCloudUploadAlt className="setting-icon" />
-            <span className="setting-label">Data Backup & Sync</span>
+            <span className="setting-label">Self Test & Restart</span>
             <FaChevronRight className="arrow-icon" />
           </button>
 

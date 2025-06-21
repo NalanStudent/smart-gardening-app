@@ -27,3 +27,86 @@
     grid-template-columns: 1fr; /* Single column on very small screens */
   }
 }
+
+/* src/components/Homepage/Homepage.css */
+.homepage-container {
+  padding: 20px;
+  /* Add position relative to act as a container for absolutely positioned children if needed, though FAB will be fixed */
+  position: relative; 
+}
+
+/* MODIFIED: The h2 is now inside a flex container */
+.homepage-container h2 {
+  color: var(--dark-green);
+  margin: 0; /* Remove margin to align better inside the flex container */
+  text-align: center;
+}
+
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 20px;
+}
+
+.no-zones-message {
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--dark-gray);
+  margin-top: 50px;
+}
+
+/* --- NEW STYLES BELOW --- */
+
+/* Container for the main title and its icons */
+.homepage-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between icons and title */
+  margin-bottom: 20px;
+}
+
+/* Styling for the microphone and help icons */
+.title-icon {
+  font-size: 1.8em; /* Adjust icon size */
+  color: var(--primary-green);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.title-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Styling for the Floating Action Button (FAB) */
+.fab-add-zone {
+  position: fixed; /* This makes it float over the content */
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em; /* Size of the plus icon */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  z-index: 100; /* Ensures it's above other elements */
+  transition: all 0.3s ease;
+}
+
+.fab-add-zone:hover {
+  background-color: var(--dark-green);
+  transform: scale(1.05) rotate(90deg); /* Add a little animation on hover */
+}
+
+
+@media (max-width: 600px) {
+  .zones-grid {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+}
